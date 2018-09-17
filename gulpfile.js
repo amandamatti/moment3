@@ -3,6 +3,8 @@ const concat    = require("gulp-concat");
 const uglify    = require("gulp-uglify");
 const cleanCSS  = require("gulp-clean-css");
 const watch     = require("gulp-watch");
+const imagemin  = require("gulp-imagemin");
+const concatcss = require("gulp-concat-css");
 
 /* Flytta och minifiera HTML-filer */
 gulp.task("copyhtml", function() {
@@ -10,9 +12,10 @@ gulp.task("copyhtml", function() {
         .pipe(gulp.dest("pub/"))
 });
 
-/* Flytta och minifiera CSS-filer */
+/* Sammanslå, flytta och minifiera CSS-filer */
 gulp.task("copycss", function() {
     return gulp.src("src/css/*.css")
+        .pipe(concatcss("main.css"))
         .pipe(cleanCSS())
         .pipe(gulp.dest("pub/css"))
 });
@@ -23,6 +26,13 @@ gulp.task("concminjs", function() {
         .pipe(concat("main.min.js"))
         .pipe(uglify())
         .pipe(gulp.dest("pub/js"));
+});
+
+/* Flytta och minifiera images */
+gulp.task("copyimg", function() {
+    return gulp.src("src/images/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("pub/images"));
 });
 
 /* Kontrollera ändringar i filsystemet */
@@ -38,6 +48,10 @@ gulp.task("watcher", function() {
     watch("src/css/*.css", function() {
         gulp.start("copycss")
     });
+
+    watch("src/images/*", function() {
+        gulp.start("copyimg");
+    });
 });
 
-gulp.task("default", ["copyhtml", "copycss", "concminjs", "watcher"]);
+gulp.task("default", ["copyhtml", "copycss", "concminjs", "copyimg", "watcher"]);

@@ -1,0 +1,63 @@
+/*  Amanda Matti
+    Webbutveckling III
+    Mittuniversitetet 2018 */
+
+/* Media queries */
+@media screen and (max-width: 780px) {
+    p {
+        font-size: 1em;
+    }
+
+    .col-3 {
+        padding: 1%;
+        margin: 10px 0 0 0; 
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .col-3 {
+        width: 100%; 
+        margin: 0px;
+        height: 100%;
+    }
+
+    .col-4, .col-5 {
+        width: 100%;
+        
+    }
+
+    #profile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #profile2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        margin-top: 10px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 500%;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+    
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
+
+}

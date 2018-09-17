@@ -8,103 +8,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lato" rel="stylesheet">
     <title>Amanda Matti - Webbutveckling</title>
 </head>
 <body>
     <div class="container">
+            <div class="row">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="index.html">Hem</a>
+                    <a href="projects.html">Projekt</a>
+                </div>      
+                <span style="font-size:30px;cursor:pointer;font-family:'Great Vibes'; color:#8A847F" onclick="openNav()">&#9776; Meny</span>
+           
+                <div class="col-1">
+                    <a href="index.html">
+                    <h1>Amanda Matti</h1>
+                    <h2>Webbutvecklingsprogrammet</h2>
+                </a>
+                </div> <!-- 100% -->
+            </div>
         <div class="row">
-            <div class="col-1">
-                <h1>Amanda Matti</h1>
-                <h2>Webbutvecklingsprogrammet</h2>
-
-            </div> <!-- 100% -->
+            <div class="col-3">
+                <h3>Vem är jag?</h3>
+                <p>Amanda heter jag, är 25 år gammal. Jag sitter oftast med en kaffekopp i handen. Nyligen har jag återvänt till Luleå efter
+                    några år på Västkusten där jag bland annat hittade mig en dalmas, lärde mig segla och upptäckte mitt intresse för
+                    webbdesign och e-handel. Nu ser jag fram emot två spännande år här på Webbutvecklingsprogrammet!</p>
+            </div>
+            <div class="col-3">
+                <img id="profile" src="images/amanda.jpg" alt="Skrivbord" width="400">
+            </div>
         </div>
 
-    <p>Amanda heter jag, är 25 år gammal. Jag sitter oftast med en kaffekopp i handen. Nyligen har jag återvänt till Luleå efter
-        några år på Västkusten där jag bland annat hittade mig en dalmas, lärde mig segla och upptäckte mitt intresse för
-        webbdesign och e-handel. Nu ser jag fram emot två spännande år här på Webbutvecklingsprogrammet!</p>
-
-    <h3>Utvecklingsmiljö</h3>
-    <p>Windows 10, Visual Studio Code, FireFTP.</p>
-
-    <h3>Kurser</h3>
-    <ul>
-        <li>DT057G Webbutveckling I
-            <ul>
-                <li><a href="dt057g2/index.htm" title="Moment 2" target="_blank">Moment 2</a></li>
-            </ul>
-            <ul>
-                <li><a href="dt057g - CSS/index.htm" title="Moment 3" target="_blank">Moment 3</a></li>
-            </ul>
-            <ul>
-                <li><a href="moment4/index.htm" title="Moment 4.2" target="_blank">Moment 4</a></li>
-            </ul>
-            <ul>
-                <li><a href="ProjektWebbutv/index.htm" title="Projekt" target="_blank">Projekt</a></li>
-            </ul>
-        </li>
+    <div class="row">
+        <div class="col-3">
+           <img id="profile2" src="images/skrivbord.jpg" alt="Amanda" width="400">
+        </div>
+        <div class="col-3">
+                <h3>Rubrik</h3>
+                <p>Här kunde det ha varit lite mer text om något passande men nu skriver jag bara för att fylla ut lite.</p>
+        </div>
+    </div>
 
 
-        <li>DT084G Introduktion till programmering i JavaScript
-            <ul>
-                <li><a href="moment3/index.htm" title="Moment 3" target="_blank">Moment 3</a></li>
-            </ul>
-            <ul>
-                <li><a href="dt084gmoment4.1/index.htm" title="Moment 4.1" target="_blank">Moment 4.1</a></li>
-            </ul>
-            <ul>
-                <li><a href="dt084gmoment4.2/student.json" title="Moment 4.2" target="_blank">Moment 4.2</a></li>
-            </ul>
-            <ul>
-                <li><a href="moment5/index.htm" title="Moment 5" target="_blank">Moment 5</a></li>
-            </ul>
-            <ul>
-                <li><a href="projektmall/af.htm" title="Projekt" target="_blank">Projekt</a></li>
-            </ul>
-        </li>
-    </ul>
-
-<ul>
-    <li>GD008G Typografi och form för webb
-        <ul>
-            <li><a href="GD008G/Layout/index.htm" title="Layout" target="_blank">Layout</a></li>
-        </ul>
-        <ul>
-            <li><a href="GD008G/cssuppg/index.html" title="CSS" target="_blank">CSS</a></li>
-        </ul>
-        <ul>
-            <li><a href="GD008G/Mall/index.html" title="Mall" target="_blank">Mall</a></li>
-        </ul>
-    </li>
-</ul>
-
-<ul>
-    <li>DT165G Digital bildbehandling för webb
-        <ul>
-            <li><a href="DT165G/moment3/index.htm" title="Moment 3" target="_blank">Moment 3</a></li>
-        </ul>
-        <ul>
-            <li><a href="DT165G/Projekt/index.html" title="Projekt webbutik" target="_blank">Projekt webbutik</a></li>
-        </ul>
-    </li>
-</ul>
-<ul>
-    <li>DT093G Webbutveckling II
-        <ul>
-            <li><a href="moment1_php/index.php" title="Moment 1" target="_blank">Moment 1</a></li>
-        </ul>
-        <ul>
-            <li><a href="http://studenter.miun.se/~amma1702/bloggportal/index.php" title="Bloggportal" target="_blank">Bloggportal</a></li>
-        </ul>
-    </li>
-</ul>
-     
+<footer>  
+    <div class="col-2">
+        <p>&copy;2018 Amanda Matti 2018</p> 
+    </div>
+</footer>
 </div> <!-- /container -->
-
-
     <script src="js/main.min.js"></script>
 </body>
 </html>
