@@ -23,6 +23,10 @@
         float: left;
         padding: 20px;
     }
+
+    .col-3 p {
+        padding: 0 10% 10% 10%;
+    }
     
     body {
         background-color:#FFFFFF;
@@ -38,6 +42,8 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         padding: 20px 0px 0 0px;
     }
+
+    /* Headings and text */
 
     h1 {
         font-family: 'Great Vibes';
@@ -79,6 +85,8 @@
         text-decoration: none;
     }
 
+    /* Images */
+
     #profile {
         border-radius: 25px;
         width: 100%;
@@ -91,11 +99,6 @@
         width: 100%;
         max-width: 400px;
     }
-
-    .col-3 p {
-        padding: 0 10% 10% 10%;
-    }
-
     
    /* Footer */
     footer {
