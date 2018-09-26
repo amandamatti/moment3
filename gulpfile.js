@@ -5,6 +5,8 @@ const cleanCSS  = require("gulp-clean-css");
 const watch     = require("gulp-watch");
 const imagemin  = require("gulp-imagemin");
 const concatcss = require("gulp-concat-css");
+const sass      = require("gulp-sass");
+ const sourcemaps= require("gulp-sourcemaps") 
 
 /* Flytta och minifiera HTML-filer */
 gulp.task("copyhtml", function() {
@@ -19,6 +21,17 @@ gulp.task("copycss", function() {
         .pipe(cleanCSS())
         .pipe(gulp.dest("pub/css"))
 });
+
+/* Konvertera SCSS till CSS */
+gulp.task("sass", function() {
+    return gulp.src("src/scss/*.scss")
+        .pipe(sourcemaps.init()) 
+        .pipe(sass().on("error", sass.logError))
+        .pipe(sourcemaps.write()) 
+        .pipe(concatcss("main.css"))
+        
+        .pipe(gulp.dest("pub/css/"));
+}); 
 
 /* Sammanslå och minifiera JavaScript */
 gulp.task("concminjs", function() {
@@ -52,6 +65,11 @@ gulp.task("watcher", function() {
     watch("src/images/*", function() {
         gulp.start("copyimg");
     });
+
+    watch("src/scss/*", function() {
+        gulp.start("sass");
+    })
+
 });
 
-gulp.task("default", ["copyhtml", "copycss", "concminjs", "copyimg", "watcher"]);
+gulp.task("default", ["copyhtml", "copycss", "sass", "concminjs", "copyimg", "watcher"]);

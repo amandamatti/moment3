@@ -1,0 +1,43 @@
+//  Amanda Matti 
+//  Webbutveckling III
+//  Mittuniversitetet 2018 
+
+// Code tips for the function from: http://zerosixthree.se/dynamically-change-text-color-with-sass/
+
+@function buttoncolor($color) {
+    @if (lightness($color) > 45) {
+      @return $color5;
+    }
+    @else {
+      @return $color1;
+    }
+}
+
+ %button {
+    display: block;
+    padding: 2%;
+    width: 150px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1em;
+    font-family: $font_heading2;  
+  }
+  
+  .button {
+    @extend %button;
+  }
+  
+  .button-yes {
+    background: $button_yes;
+    color: buttoncolor($button_yes);
+  }
+  
+  .button-no {
+    background: $button_no;
+    color: buttoncolor($button_no);
+  }
+
+  .button-maybe {
+    background: $button_maybe;
+    color: buttoncolor($button_maybe);
+  }

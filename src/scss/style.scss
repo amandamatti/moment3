@@ -1,0 +1,157 @@
+/* Amanda Matti 
+   Webbutveckling III
+   Mittuniversitetet 2018 */
+
+@import "reset";
+@import "colors";
+@import "fonts";
+@import "gridlayout";
+@import "button";
+
+
+body {
+    background: $color1;
+    display: block;
+} 
+
+.container {
+    background-color: $color2;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1280px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 0px 0 0px;
+}
+
+// Headings and text
+.headingstext {
+    text-align: center;
+    font-family: $font_heading;
+}
+
+h1 {
+    @extend .headingstext;
+    font-size: 900%;
+    font-weight: 200;
+    color: $color3;
+    }
+
+h2 {
+    color: $color4;
+    font-family: $font_heading2;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+h3 {
+    @extend .headingstext;
+    color: $color1_dark;
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+h4 {
+    @extend .headingstext;
+    color: $color1_dark;
+    font-size: 2em;
+    margin: 20px 0 20px 0;
+}
+
+p {
+    font-family: $font_p;
+    font-size: 1.2em;
+    line-height: 1.9em;
+}     
+    
+
+a {
+    text-decoration: none;
+}
+
+/* Menu */
+.sidenav {
+    height: 400px; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: $color4;
+    overflow-x: hidden; 
+    padding-top: 80px; 
+    transition: 0.5s; 
+ 
+    a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 40px;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    font-family: $font_heading;
+    font-weight: 200;
+    color: $color1_dark;
+
+    &:hover {
+        color: $color1_light;
+    }
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    } 
+}
+
+// Images 
+@mixin imagestyle {
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#profile {
+    @include imagestyle;
+}
+
+#profile2 {
+    @include imagestyle;
+    float: right;
+}
+
+// Footer
+footer {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7em;
+    color: color5;
+    text-align: center;
+
+    p {
+        color: $color5;
+    }
+}
+
+// Projects lists 
+.projects {
+    font-family: font_p; 
+    font-size: 1.3em;
+    line-height: 2em;
+
+    a {
+    text-decoration: none;
+    color: $color5;
+
+    &:hover {
+        color: $color1_dark;
+    }
+}
+}
+
+
+
+@import "mediaqueries";
